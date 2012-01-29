@@ -37,9 +37,9 @@ Retrieving records:
 
     $myGeneration = User::find(array('age' => 22));
 
-    $all = User::find('all');
+    $all = Model::find('User', 'all');
 
-    $me = User::get(array('name'=>'John Doe'));
+    $me = Model::get('User', array('name'=>'John Doe'));
 
 ## Licensing
 myModel is public domain, you can do whatever you like with it, 
