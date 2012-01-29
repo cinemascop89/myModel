@@ -22,16 +22,23 @@ Declaring a model:
 
     require_once 'model.php'
 
-    class User extends {
+    class User extends Model {
     }
 
 
-Creationg and saving instances:
+Creating and saving instances:
 
     $user = new User();
     $user->name = 'John Doe';
     $user->age = 22;
     $user->save();
+
+Using relations:
+
+If you have a table called followers, with a field 'user_id', 
+you can get an array of followers that belongs to a given user
+
+    $followers = $user->followers;
 
 Retrieving records:
 
